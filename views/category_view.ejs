@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets//wojak_view.css">
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+      <div class="main-content">
+          <%- include('infinite_list', {wojak_list, category}) %>
+        </div>
+    </div>
+  </body>
+</html>

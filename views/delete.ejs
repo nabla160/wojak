@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+    
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+
+      <div class="main-content">
+          <div class="pres">
+            <div>Do you really want to delete your account ? (This will also delete your wojaks posted on the platform)</div>
+            <a href="/user/me/delete">Confirm deletion</a>
+        </div>          
+    </div>
+  </body>
+</html>

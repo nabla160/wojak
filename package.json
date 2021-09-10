@@ -1,0 +1,34 @@
+{
+  "name": "wokak",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.4",
+    "cookie-session": "^1.4.0",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-fileupload": "^1.2.1",
+    "fs": "^0.0.1-security",
+    "http-errors": "~1.6.3",
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0",
+    "jimp": "^0.16.1",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-reddit": "^0.2.4",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^3.4.0"
+  }
+}

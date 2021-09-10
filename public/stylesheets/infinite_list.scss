@@ -1,0 +1,36 @@
+.infi_list{
+    display: flex;
+    flex-direction: column;
+        .mini{
+            display: block;
+            flex: none;
+            width:10%;
+            font-size: 0.8em;
+        }
+        height: 100%;
+    }
+    
+    .infi_title{
+        margin-left: 5%;
+        font-size: 3em;
+        font-weight: bold;
+    }
+    
+    .infi_content{    
+        height: 83%;
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .infi_line{
+        display: flex;
+        flex-wrap: nowrap;
+        flex: none;
+        max-height: 200px;
+        height: 18em;
+        width: 100%;
+        justify-content: center;
+    
+    }

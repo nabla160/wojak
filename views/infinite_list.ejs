@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/stylesheets/minia.css" />
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/infinite_list.css' />
+
+<% 
+    var titre;
+    if(locals.custom !== undefined){
+        titre = custom;
+    }
+
+    else if(locals.random !== undefined && locals.random == true){
+        titre = "Some random wojaks :"
+    }
+    else if(locals.category == undefined){
+        titre = "Tag : " + tag;
+    }
+    else{
+        titre = "Category : " + category;
+    }
+
+%>  
+
+<div class="infi_list">
+    <div class="infi_title"><%=titre%></div>
+    <div class = infi_content>
+
+        <div class="infi_line">
+
+        <% 
+        var i = 0;
+        wojak_list.forEach(wojak => {
+            var data = {
+                id: wojak.id,
+                name: wojak.name,
+                user: wojak.user,
+                user_id: wojak.user_id
+            }
+            %>           
+
+            <%- include('miniature', {data}) %>
+
+            <% 
+            i ++;
+            if(i % 9 == 0){
+                second_line = true;
+                %> </div><div class="infi_line"> 
+            <%  } %> 
+
+        <% }); %>
+            </div>
+    </div>
+</div>
+
+<template class="t_infi_line">
+    <div class="infi_line"></div>    
+</template>
+
+<template class="t_mini">
+    <div class="mini">
+        <div class="mini_img"><a href=""><img src="" /></a></div>
+        <div class="mini_data">
+        <div class="mini_name"><a href=""></a></div>
+        <div class="mini_user"><a href=""></a></div>
+    </div>
+</div>
+</template>
+

@@ -1,0 +1,126 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.vertical_menu {
+  width: 100%;
+  height: 100%;
+  background-color: #7a021e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: white;
+}
+
+.vertical_menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.vertical_menu a:hover {
+  text-decoration: underline;
+}
+
+@media (orientation: portrait) {
+  .vertical_menu {
+    display: none;
+  }
+}
+
+.vm_up {
+  min-height: 40%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vm_up .link_img {
+  margin: 20px;
+  min-height: 85%;
+  width: 98%;
+  margin-bottom: -10%;
+  margin-top: -10%;
+  display: block;
+}
+
+.vm_up img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.vm_up .vm_title {
+  height: 10%;
+  width: 100%;
+  font-size: 3.5em;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+}
+
+.vm_down {
+  margin-top: 0;
+  margin-left: 10%;
+  height: 55%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.vm_down .vm_down_title {
+  font-size: 2.5em;
+  text-decoration: underline;
+}
+
+.vm_down .vm_tags {
+  width: 80%;
+  margin-top: 3%;
+  height: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 2em;
+}
+
+.vm_down .vm_tags .vm_tag {
+  margin-top: 10px;
+  margin-left: 5%;
+  width: 95%;
+}
+/*# sourceMappingURL=vertical_menu.css.map */

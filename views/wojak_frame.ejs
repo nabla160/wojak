@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/stylesheets/wojak_frame.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>var id = <%=data.id%></script>
+<script src="/javascripts/fav.js"></script>
+
+
+<div class="frame">
+    <div class="head_title"><span class="fav"><span>☆</span></span><h1><%=data.name%></h1> <h2> add by : <a class="wojak_user" href="/user/<%=data.user_id%>"><%=data.user%> </h2> </a> </div>
+    <div class="wojak_img">
+      <a href="/wojak/<%=data.id%>"><img src="/wojak/<%=data.id%>/img" /></a>
+      
+    </div>
+    <table class="wojak_data">
+      <tbody>
+        <tr>
+          <td class="table_type">Category</td>
+          <td class="table_data"><a href="/category/<%=data.category%>"><%=data.category%></a></td>
+        </tr>
+        <tr>
+          <td class="table_type">Direct Link</td>
+          <td class="table_data"><a href="/wojak/<%=data.id%>/img">Click me</a></td>
+        </tr>
+        <tr>
+          <td class="table_type">Tags</td>
+          <td class="table_data">
+            <%
+            if(data.tag_1!= ""){
+              %><a href="/tag/<%=data.tag_1%>"><%= data.tag_1%></a><% 
+            }
+            if(data.tag_2!= ""){
+              %><a href="/tag/<%=data.tag_2%>">, <%= data.tag_2%></a><%
+            }
+            if(data.tag_3!= ""){
+              %><a href="/tag/<%=data.tag_3%>">, <%= data.tag_3%></a><%
+            }
+            if(data.tag_4!= ""){
+              %><a href="/tag/<%=data.tag_4%>">, <%= data.tag_4%></a><%
+            }
+            if(data.tag_5!= ""){
+              %><a href="/tag/<%=data.tag_5%>">, <%= data.tag_5%></a><%
+            }
+            if(data.tag_6!= ""){
+              %><a href="/tag/<%=data.tag_6%>">, <%= data.tag_6%></a><%
+            }
+            %>
+          </td>
+          <tr>
+          <td class="table_type">Views</td>
+          <td class="table_data"><%= data.view%></td>
+         </tr>
+         <tr>
+          <td class="table_type">Likes</td>
+          <td class="table_data"><%= data.fav%></td>
+         </tr>
+
+         <% if(user !== undefined && data.user_id == user.id){ %>
+          <tr>
+            <td class="table_type"></td>
+            <td class="table_data delete"><a href="/wojak/<%=data.id%>/delete">Delete the wojak</a></td>
+         </tr>
+         <% } %>
+
+      </tbody>
+    </table>
+      
+    </div>

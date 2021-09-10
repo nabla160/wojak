@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+    
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+
+      <div class="main-content">
+          <div class="pres">
+            <div>This site aims to group the maximum of wojak in a gallery sorted by type of wojak, but also by Tags, the site does not endorse aspects, anti-Semitic, racist or other form of discrimination that some wojak may have. Be aware, however, that wojaks that are highly offensive may have to be removed by administrators</div>
+        </div>
+          <%- include('category_list')%>    
+
+          <%- include('infinite_list')%>  
+    </div>
+  </body>
+</html>

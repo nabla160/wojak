@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+      <div class="main-content">
+          <div class="content-1">
+            <%- include('wojak_frame', {data})%>            
+            <%- include('vertical_list', v_value)%>  
+            
+          </div>
+
+          <div class="content-2">
+            <%- include('horizontal_list', h_value)%>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

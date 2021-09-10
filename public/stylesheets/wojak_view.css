@@ -1,0 +1,100 @@
+.main-content {
+  background-color: #dddddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 87.3%;
+  width: 98.5%;
+  padding: 1.5%;
+  padding-right: 0;
+  padding-bottom: 0;
+  border-radius: 75px 0px 0px 0px;
+  border-color: #7a021e;
+  border-style: solid none none solid;
+  overflow-x: scroll;
+}
+
+.main-content ::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
+
+@media (orientation: portrait) {
+  .main-content {
+    height: 97%;
+    border-radius: 0;
+  }
+}
+
+.main-content ::-moz-selection {
+  background-color: rgba(122, 2, 30, 0.7);
+}
+
+.main-content ::selection {
+  background-color: rgba(122, 2, 30, 0.7);
+}
+
+.main-content img::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main-content img::selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.content-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 65%;
+  clear: both;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (orientation: portrait) {
+  .content-1 {
+    height: 50%;
+  }
+}
+
+.frame {
+  width: 65%;
+  height: 100%;
+}
+
+.verti_list {
+  width: 30%;
+}
+
+.content-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30%;
+  width: 95%;
+  margin-right: auto;
+  overflow-x: scroll;
+}
+
+@media (orientation: portrait) {
+  .content-2 {
+    height: 15%;
+  }
+}
+/*# sourceMappingURL=wojak_view.css.map */

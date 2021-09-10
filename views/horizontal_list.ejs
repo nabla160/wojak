@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/stylesheets/horizontal_list.css">
+<link rel="stylesheet" href="/stylesheets/minia.css" />
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+<div class="horiz_list">
+    <div class="horiz_title"><%=title%></div>
+    <div class = horiz_content>
+
+        <div class="horiz_line">
+
+        <% 
+        var i = 1;
+        var second_line = false;
+        wojak_list.forEach(wojak => {
+            var data = {
+                id: wojak.id,
+                name: wojak.name,
+                user: wojak.user
+            }
+            %>           
+
+            <%- include('miniature', {data}) %>
+
+            <% 
+            i ++;
+            if(i > wojak_list.length / 2 && !second_line){
+                second_line = true;
+                %> </div><div class="horiz_line"> <%  } %> 
+
+        <% }); %>
+            </div>
+    </div>
+</div>
+

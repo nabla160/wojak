@@ -1,0 +1,78 @@
+
+
+.main-content{
+
+    ::-webkit-scrollbar { 
+    display: none;  /* Chrome Safari */
+    }   
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 87.3%;
+    width: 98.5%;
+
+    @media (orientation:portrait){
+        height: 97%;
+        border-radius: 0;
+        }
+
+    padding: 1.5%;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    border-radius: 75px 0px 0px 0px;
+    border-color: #7a021e;
+    border-style: solid none none solid;
+    
+    overflow-x: scroll;
+
+    ::selection{
+        background-color: rgba($color: #7a021e, $alpha: 0.7);
+    }
+
+    img::selection{
+        background-color: rgba($color: #000000, $alpha: 0.1);
+      }
+
+}
+
+.content-1{
+    display: flex;
+    flex-direction: row;
+
+    height: 65%;
+    clear: both;
+
+    @media(orientation:portrait){
+        height: 50%;
+    }
+
+    justify-content: space-between  ;
+    align-items: flex-start;
+}
+
+.frame{    
+    width: 65%;
+    height: 100%;
+}
+
+.verti_list{
+    width: 30%;
+}
+
+
+.content-2{
+    display: flex;
+    height: 30%;
+    width: 95%;
+    margin-right: auto;
+
+    overflow-x: scroll;
+
+    @media(orientation:portrait){
+        height: 15%;
+    }
+}
+

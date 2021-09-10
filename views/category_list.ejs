@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/stylesheets/minia.css" />
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/category_list.css' />
+
+<div class="category_list">
+    <% cat_list.forEach(element => {
+            %> <div class="cat_mini">
+                <a href="/category/<%=element.cat%>">
+                <div class="cat_mini_img"><img src="/wojak/<%=element.wojak.id%>/img/mini"></div>
+                <div class="cat_title"><%=element.cat%></div>
+                </a>
+                </div>
+    <% }); %>
+</div>

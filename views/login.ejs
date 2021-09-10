@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+    <link rel="stylesheet" href="/stylesheets/login.css"/>
+
+    <script> 
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '3949476851846461',
+          cookie     : true,
+          xfbml      : true,
+          version    : '{api-version}'
+        });
+          
+        FB.AppEvents.logPageView();   
+          
+      };
+    
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v11.0&appId=3949476851846461&autoLogAppEvents=1" nonce="ZRLfJhJz"></script>
+
+<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="yGl5SpiaMz-KflMjSRn8NA.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+
+      <div class="main-content">
+         <div class="login_main">
+          <div class="login_head">
+            Login :
+          </div>
+
+          <div class="login_local">
+            <form action="/auth/local/login" method="POST">
+              <div class="email_container l_con" >
+                <label for="username">Email :</label>
+                <input type="email" name="username" id="email" required>
+              </div>
+
+              <div class="password_container l_con">
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password" required>
+              </div>
+
+              <input type="submit" id="submit" value="Login"> 
+
+              <div class="local_link">
+                <a href="auth/local/register">No account ? Register here</a>
+                <a href="auth/local/forgot">Forgot your password ?</a>
+              </div>
+
+            </form>
+          </div>
+
+          <hr>
+
+          <div class="login_content">
+
+            <div class='desc_login'>Or loggin with a social media account :</div>
+
+              <!-- google	 -->
+                <a class="btn-google" href="/auth/google">
+                  <div class="google-content">
+                    <div class="logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+                      <defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"/><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"/><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"/><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"/>
+                    </svg>
+                    </div>
+                    <p>Sign in with Google</p>
+                  </div>
+                </a>
+
+            
+              <!-- facebook	 -->
+                <a class="btn-fb" href="/auth/facebook">
+                  <div class="fb-content">
+                    <div class="logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" version="1">
+                    <path fill="#FFFFFF" d="M32 30a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v28z"/>
+                    <path fill="#4267b2" d="M22 32V20h4l1-5h-5v-2c0-2 1.002-3 3-3h2V5h-4c-3.675 0-6 2.881-6 7v3h-4v5h4v12h5z"/>
+                  </svg>
+                    </div>
+                    <p>Sign in with Facebook</p>
+                  </div>
+                </a>
+            
+    </div>
+  </body>
+</html>

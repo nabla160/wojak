@@ -1,0 +1,49 @@
+
+.mini{
+
+    margin: 2.5px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #dddddd;
+    min-width: 10%;
+    height: 90%;
+
+    
+}
+
+.mini_img{
+ display: flex;
+ justify-content: center;
+ width: 100%;
+ height: 90%; 
+}
+
+.mini_img a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;;
+
+}
+
+.mini_img img{   
+    object-fit: scale-down;
+    max-width: 90%; 
+    height: 90%;
+}
+
+.mini_data{
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    font-size: 1.3em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mini_data div{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}

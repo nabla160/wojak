@@ -1,0 +1,65 @@
+<% 
+  var msg;
+  var t_msg = false;
+    if(!result.length > 0){
+      msg = "Your search does not return any results" 
+      t_msg = true;
+    }
+
+    var titre = "Wojaks found with : " + search 
+%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+    <link rel="stylesheet" href="/stylesheets/search.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/javascripts/search.js"></script>
+    
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+
+      <div class="main-content">
+
+        <div class=search_form>
+          <form action="/search" method="POST">
+            <input type="text" name="search" class="search_input" value="<%=search%>" placeholder="Search a wojak">
+            <select name="sort" class="sort_input">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="view">Most viewed</option>
+              <option value="fav">Most liked</option>
+            </select>
+            <input type="submit" value="🔎︎">
+          </form>
+        </div>
+
+        <% if(t_msg) { %>
+           <div class="msg">
+            <img src='/images/no_result.png'>
+             <div><%=msg%></div>             
+          </div> 
+
+          <%- include('infinite_list', {custom: '', wojak_list: [] }); %>
+
+        <% } else { %>
+          <div class="msg hidden">            
+            <img src='/images/no_result.png'>
+            <div><%=msg%></div>
+         </div> 
+          <%- include('infinite_list', {custom: titre, wojak_list: result}); %>
+        <% } %>
+
+          
+         
+    </div>
+  </body>
+</html>

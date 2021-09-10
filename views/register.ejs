@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+    <link rel="stylesheet" href="/stylesheets/login.css"/>
+
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+
+      <div class="main-content">
+         <div class="login_main">
+          <div class="login_head">
+            Register here :
+          </div>
+
+          <div class="login_local">
+            <form action="/auth/local/register" method="POST">
+
+              <div class="username_container l_con">
+                <label for="username">Username :</label>
+                <input type="text" name="username" id="username" required>
+              </div>
+
+              <div class="email_container l_con">
+                <label for="email">Email :</label>
+                <input type="email" name="email" id="email" required>
+              </div>
+
+              <div class="password_container l_con">
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password" required>
+              </div>
+
+              <input type="submit" id="submit" value="Register"> 
+
+              <div class="local_link">
+                <a href="/login">Already registered ? Login here</a>
+              </div>
+
+            </form>
+          </div>
+
+         </div>
+    </div>
+  </body>
+</html>

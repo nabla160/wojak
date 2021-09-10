@@ -1,0 +1,55 @@
+.horiz_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.horiz_list .mini {
+  width: 10%;
+  font-size: 0.8em;
+}
+
+@media (orientation: portrait) {
+  .horiz_list .mini {
+    width: 15%;
+  }
+}
+
+.horiz_title {
+  height: 15%;
+  font-size: 3em;
+}
+
+.horiz_content {
+  height: 83%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.horiz_line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+}
+/*# sourceMappingURL=horizontal_list.css.map */

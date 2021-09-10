@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <% ids.forEach(element => { %>
+        
+        <div class="wojak_box">
+            <img src="wojak/<%=element%>/img" class="wojak_image">
+        </div>
+
+    
+    <% }); %>
+    
+</html>

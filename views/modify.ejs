@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+    <link rel="stylesheet" href="/stylesheets/login.css"/>
+
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+
+      <div class="main-content">
+         <div class="login_main">
+          <div class="login_head">
+            Your account information :
+          </div>
+
+          <div class="login_local">
+            <form action="/user/me/modify" enctype="multipart/form-data" method="POST">
+
+              <div class="username_container l_con">
+                <label for="username">Username :</label>
+                <input type="text" name="username" id="username" value="<%=user.name%>" required>
+              </div>
+
+              <div class="picture_container l_con">
+                <label for="password">Modify your picture profile :</label>
+                <input type="file" name="picture" id="picture" accept="image/png">
+              </div>
+
+              <input type="submit" id="submit" value="Modify"> 
+
+
+            </form>
+          </div>
+
+         </div>
+    </div>
+  </body>
+</html>

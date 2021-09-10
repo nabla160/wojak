@@ -1,0 +1,39 @@
+.horiz_list{
+display: flex;
+flex-direction: column;
+    .mini{
+        width:10%;
+        font-size: 0.8em;
+
+        @media(orientation:portrait){
+            width: 15%;
+        }
+    }
+    height: 100%;
+}
+
+.horiz_title{
+    height: 15%;    
+    font-size: 3em;
+}
+
+.horiz_content{    
+    height: 83%;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+.horiz_line{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    //width: 100vw;
+    height: 50%;
+
+}

@@ -1,0 +1,29 @@
+html, body {
+  margin: 0px;
+  background-color: #7a021e;
+  height: 100%;
+  width: 100% ;
+
+  font: 0.5vw "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  @media (orientation: portrait) {
+    font-size: 0.8vw;
+  }
+  ::selection{
+    background-color: rgba($color: #FFFFFF, $alpha: 0.4);
+  }
+
+  
+}
+
+a {
+  color: #020239;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+
+  -webkit-appearance: none;
+  
+  }
+  
+  textarea {  -webkit-appearance: none;}  

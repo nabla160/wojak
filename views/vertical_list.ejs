@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/stylesheets/vertical_list.css">
+<link rel="stylesheet" href="/stylesheets/minia.css" />
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+<div class="verti_list">
+    <div class="verti_title"><%=title%></div>
+    <div class = verti_content>
+
+        <div class="verti_line">
+
+        <% 
+        var i = 1;
+        var second_line = false;
+        wojak_list.forEach(wojak => {
+            var data = {
+                id: wojak.id,
+                name: wojak.name,
+                user: wojak.user
+            }
+            %>           
+
+            <%- include('miniature', {data}) %>
+
+            <% 
+            i ++;
+            if(i > wojak_list.length / 2 && !second_line){
+                second_line = true;
+                %> </div><div class="verti_line"> <%  } %> 
+
+        <% }); %>
+            </div>
+    </div>
+</div>

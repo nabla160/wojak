@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+    
+  </head>
+  <body>
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+
+      <div class="main-content">
+          
+          <div class="profile">
+            <div class="picture">
+              <img src="/user/<%=t_user.id%>/img">
+            </div>
+            <div class="info">
+              <span class="username">Profile of : <%=t_user.name%></span>
+              <span class="date">Date of creation : <%=t_user.date%></span>
+              <% if(my_account) { %>
+                <span class="perso">
+                  <a id="delete" href="/user/me/delete">Delete my account</a>
+                  <a  href="/user/me/modify">Modify my account</a> 
+                </span>
+              <% } %>
+            </div>
+          </div>
+
+          <% if(my_account){ %>
+            
+            <%- include('infinite_list', {wojak_list: fav_list, custom: fav_custom}) %> 
+          <% } %>
+
+
+          <%- include('infinite_list')%>  
+    </div>
+  </body>
+</html>

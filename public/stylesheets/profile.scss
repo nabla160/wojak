@@ -1,0 +1,57 @@
+.profile{
+    height: 50%;
+    width: 50%;
+
+    border-radius: 25px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-bottom: 2%;
+
+    .picture{
+        height: 80%;
+        width: 35%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            height: 25em;
+            width: 25em;
+            object-fit: contain;
+
+            border-radius: 100%;
+            background-color: #b1bcbc;
+        }
+    }
+
+    .info{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        .username{
+            font-size: 5em;
+        }
+
+        .date{
+            font-size: 1.5em;
+        }
+
+        .perso{
+            font-size: 1.2em;
+            #delete:hover{
+                color: red;
+                transition-duration: 0.3s;
+            }
+        }
+    }
+}

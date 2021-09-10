@@ -1,0 +1,39 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/horizontal_menu.css' />
+
+<div class="horiz_menu">
+    <a href="/" class="portrait_logo">
+        <img src="/images/logo.png"/>
+        </a>
+    <a href="/wojak/add" class="add_wojak">
+    Add a Wojak   
+    </a>
+    <div class="search_wojak">
+        <form method="POST" action="/search">
+            <input type="text" name="search" placeholder="Search a wojak">
+            <input type="submit" value="🔎︎">
+        </form>
+        
+
+        <% if(user == undefined){ %>
+            <a href='/login' class="login_b">
+                <div href="/login">
+                    Login
+                </div>
+            </a>
+        <% } else{ %>
+            <a href='/user/me' class="user">
+                <div class="pp_container">
+                    <img src="/user/<%=user.id%>/img">
+                </div>
+                <div class="user_container">
+                    <span>You are logged in as :</span>
+                    <span class='username'><%=user.name%></span>
+                </div>
+            </a>
+        <%}%>
+        
+    </div>
+
+    
+</div>

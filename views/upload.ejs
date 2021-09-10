@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wojak Paradise</title>   
+
+    <link rel="stylesheet" href="/stylesheets/dropzone/basic.css" />
+    <link rel="stylesheet" href="/stylesheets/dropzone/dropzone.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.02.min.css">
+
+
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/wojak_view.css" />
+    <link rel="stylesheet" href="/stylesheets/upload.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/javascripts/dropzone/dropzone.js"></script>
+    <script src="/javascripts/upload.js"></script>
+
+
+  </head>
+  <body>
+    <datalist id="cat_list">
+      <% category.forEach(element => {
+        %> <option value="<%=element%>"></option> 
+      <% }); %>
+    </datalist>
+
+    <div class="vertical"><%- include('vertical_menu')%></div>
+
+    <div class="horizontal">
+      <%- include('horizontal_menu')%>
+
+      <div class="main-content">
+
+          <div class="pres">
+            <h1>Send a wojak</h1>
+          </div>
+
+      <form id="wojak_form " method="POST" class="dropzone_form" encType="multipart/form-data">
+
+        <div class="dropzone_preview dropzone">
+          <div class="dz_deco">
+            <div class="d_left"><img src="/images/upload_left.png"></div>
+          <div class="d_central">
+            <div class="d_top">Upload your wojak here. </div>
+            <div class="d_bot">(Drag the image here or click this box.)</div>
+          </div>
+          <div class="d_right"><img src="/images/upload_right.png"></div>
+          </div>
+        </div>
+
+        <div class="form_entry">
+            <div class="form_part">
+              <div class="entry">
+              <label for="titre" class="form_label"><div>Name</div></label>
+              <input name="name" type="text" id="name" class="form_field"/>         
+            </div>
+
+            <div class="entry">
+              <label for="category" class="form_label"><div>Catégory</div></label>
+              <select name="category" id="category" list="cat_list" class="form_field">
+                <% category.forEach(element => {
+                %> <option value="<%=element%>"><%=element%></option> 
+                <% }); %>
+                </select>           
+            </div>
+          </div>
+
+          
+
+          <div class="form_part form_tag">
+            <label for="autocomplete" class="auto_label" autocomplete="off"><div>Add some tags </div></label>
+            <input id="autocomplete">
+            <div id="add_tag"><span>＋</span></div>
+          </div>
+
+          <div class="tag_list">
+
+            <div class="tag_container">
+            <input name="tag_1" type="text" id="tag_1" class="tag" placeholder=" " disabled />
+            <div class="delete_tag" id="delete_tag_1"><span>×</span></div>
+            </div>
+
+            <div class="tag_container">
+            <input name="tag_2" type="text" id="tag_2" class="tag" placeholder=" " disabled/>
+            <div class="delete_tag" id="delete_tag_2"><span>×</span></div>
+            </div>
+            
+            <div class="tag_container">
+            <input name="tag_3" type="text" id="tag_3" class="tag" placeholder=" " disabled/>
+            <div class="delete_tag" id="delete_tag_3"><span>×</span></div>
+            </div>
+
+            <div class="tag_container">
+            <input name="tag_4" type="text" id="tag_4" class="tag" placeholder=" " disabled/>
+            <div class="delete_tag" id="delete_tag_4"><span>×</span></div>
+          </div>
+
+            <div class="tag_container">
+            <input name="tag_5" type="text" id="tag_5" class="tag" placeholder=" " disabled/>
+            <div class="delete_tag" id="delete_tag_5"><span>×</span></div>
+          </div>
+
+            <div class="tag_container"> 
+            <input name="tag_6" type="text" id="tag_6" class="tag" placeholder=" " disabled/>
+            <div class="delete_tag" id="delete_tag_6" ><span>×</span></div>
+          </div>
+
+          </div>
+
+          <div class="form_submit">
+          <input type="submit" value="Upload" class="upload_button"/>
+        </div>
+
+      </div>
+      </form>
+    </div>
+  </body>
+</html>

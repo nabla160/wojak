@@ -1,0 +1,138 @@
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.frame .wojak_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 50%;
+}
+
+.frame .wojak_img a {
+  height: 100%;
+  margin-left: 1.2em;
+}
+
+.head_title {
+  text-align: left;
+  height: 15%;
+}
+
+tr {
+  max-height: 30px;
+  height: 20%;
+  font-size: 1.3em;
+}
+
+h1 {
+  display: inline;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  display: inline;
+  font-weight: normal;
+}
+
+.fav {
+  height: 1.2em;
+  width: 1.2em;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  font-size: 4rem;
+  line-height: 4rem;
+  background-color: lightgray;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fav:hover {
+  background-color: #F1C40F;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.enable {
+  background-color: #F1C40F;
+}
+
+.enable:hover {
+  background-color: lightgray;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.head_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.head_title h1, .head_title h2 {
+  margin-left: 5px;
+}
+
+.delete a {
+  color: red !important;
+}
+
+.wojak_data {
+  height: 35%;
+}
+/*# sourceMappingURL=wojak_frame.css.map */
